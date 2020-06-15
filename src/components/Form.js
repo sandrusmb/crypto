@@ -1,14 +1,15 @@
 import React from 'react';
 
 const Form = (props) => {
+
     return (<div>
-        <form>
-            <input type="number"></input>
-            <select name="firstCurrency" id="firstCurrency">
+        <form onSubmit={props.getData}>
+            <input type="number" ></input>
+            <select name="currency" id="currency">
                 <option value="BTC">De BTC a LTC</option>
                 <option value="LTC">De LTC a BTC</option>/option>
             </select>
-            <button>Convertir</button>
+            <button >Convertir</button>
         </form>
     </div>)
 }
