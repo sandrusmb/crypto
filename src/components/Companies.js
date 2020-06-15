@@ -1,4 +1,5 @@
 import React from 'react';
+import ".././stylesheets/companies.scss";
 
 const Companies = (props) => {
     let info = props.companies;
@@ -13,15 +14,15 @@ const Companies = (props) => {
         console.log(companiesValues[j]);
     }
     return (
-        <div>
-            <div>
+        <div className="container">
+            <div className="container_keys">
                 {companiesKeys.map(companyKey => {
                     return (
                         <p key={i}>{companyKey}</p>
                     )
                 })}
             </div>
-            <div>
+            <div className="container_values">
                 {companiesValues.map(companyValue => {
                     return (
                         <p key={j}>{companyValue}</p>
