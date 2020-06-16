@@ -24,7 +24,7 @@ const Companies = (props) => {
                     if (name === "BTC") {
                         return <p>{companyValue * number}</p>
                     } else {
-                        return <p>{companyValue / number}</p>
+                        return <p>{number / companyValue}</p>
                     }
 
 
