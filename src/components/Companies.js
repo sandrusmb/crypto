@@ -10,9 +10,6 @@ const Companies = (props) => {
     let companiesKeys = Object.keys(info);
     let companiesValues = Object.values(info);
 
-    console.log(companiesValues);
-    console.log(Math.max(...companiesValues));
-
     if (spinner === 2) {
         return (<div className="loader"></div>)
     }
@@ -38,9 +35,8 @@ const Companies = (props) => {
                             if (companyValue == Math.max(...companiesValues)) {
                                 return (
 
-                                    <div className="pintar">
+                                    <div className="paint">
                                         <p>{companyValue * number}<span>   ¡Ganador! </span></p>
-
                                         <hr />
                                     </div>
                                 )
@@ -57,16 +53,14 @@ const Companies = (props) => {
                         } else {
 
                             if (companyValue == Math.min(...companiesValues)) {
-
                                 return (
 
                                     <div>
-                                        <p className="pintar">{(number * number) / companyValue}<span> ¡Ganador!</span></p>
-                                        <hr className="pintar" />
+                                        <p className="paint">{(number * number) / companyValue}<span> ¡Ganador!</span></p>
+                                        <hr />
                                     </div>
                                 )
                             } else {
-
                                 return (
                                     <div>
                                         <p>{(number * number) / companyValue}</p>
@@ -81,8 +75,6 @@ const Companies = (props) => {
             </div>
         );
     }
-
-
 }
 
 export default Companies;

@@ -4,6 +4,11 @@
     justify-content: center;
     margin: 1rem 2rem;
 
+    @media all and (min-width: 768px) {
+        flex-direction: row;
+        
+      }
+
        &-input{
            border: 1px solid grey;
            border-radius: 0.5rem;
