@@ -11,6 +11,7 @@ const Companies = (props) => {
     let companiesValues = Object.values(info);
 
     console.log(companiesValues);
+    console.log(Math.max(...companiesValues));
 
     if (spinner === 2) {
         return (<div className="loader"></div>)
@@ -29,26 +30,52 @@ const Companies = (props) => {
                         )
                     })}
                 </div>
+
                 <div className="ciaContainer_values">
                     {companiesValues.map(companyValue => {
 
                         if (name === "BTC") {
-                            return (
-                                <div>
-                                    <p>{companyValue * number}</p>
-                                    <hr />
-                                </div>
-                            )
+                            if (companyValue == Math.max(...companiesValues)) {
+                                return (
+
+                                    <div className="pintar">
+                                        <p>{companyValue * number}<span>   ¡Ganador! </span></p>
+
+                                        <hr />
+                                    </div>
+                                )
+                            }
+                            else {
+                                return (
+                                    <div>
+                                        <p>{companyValue * number}</p>
+                                        <hr />
+                                    </div>
+                                )
+
+                            }
                         } else {
-                            return (
-                                <div>
-                                    <p>{(number * number) / companyValue}</p>
-                                    <hr />
-                                </div>
-                            )
+
+                            if (companyValue == Math.min(...companiesValues)) {
+
+                                return (
+
+                                    <div>
+                                        <p className="pintar">{(number * number) / companyValue}<span> ¡Ganador!</span></p>
+                                        <hr className="pintar" />
+                                    </div>
+                                )
+                            } else {
+
+                                return (
+                                    <div>
+                                        <p>{(number * number) / companyValue}</p>
+                                        <hr />
+                                    </div>
+                                )
+                            }
+
                         }
-
-
                     })}
                 </div>
             </div>
