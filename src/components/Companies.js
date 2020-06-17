@@ -3,12 +3,12 @@ import ".././stylesheets/companies.scss";
 
 const Companies = (props) => {
 
-    let info = props.companies;
-    let spinner = props.loading;
-    let number = props.amount;
-    let name = props.currency;
-    let companiesKeys = Object.keys(info);
-    let companiesValues = Object.values(info);
+    const info = props.companies;
+    const spinner = props.loading;
+    const number = props.amount;
+    const name = props.currency;
+    const companiesKeys = Object.keys(info);
+    const companiesValues = Object.values(info);
 
     if (spinner === 2) {
         return (<div className="loader"></div>)
@@ -48,13 +48,11 @@ const Companies = (props) => {
                                         <hr />
                                     </div>
                                 )
-
                             }
                         } else {
 
                             if (companyValue == Math.min(...companiesValues)) {
                                 return (
-
                                     <div>
                                         <p className="paint">{(number * number) / companyValue}<span> ¡Ganador!</span></p>
                                         <hr />
@@ -68,7 +66,6 @@ const Companies = (props) => {
                                     </div>
                                 )
                             }
-
                         }
                     })}
                 </div>

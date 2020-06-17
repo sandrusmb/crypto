@@ -3,7 +3,6 @@ import '../stylesheets/App.css';
 import Form from './Form';
 import Companies from './Companies';
 
-
 class App extends React.Component {
   state = {
     companies: [],
