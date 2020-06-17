@@ -1,17 +1,20 @@
 import React from 'react';
+import ".././stylesheets/form.scss";
 
 const Form = (props) => {
 
-    return (<div>
-        <form onSubmit={props.getData}>
-            <input type="number" ></input>
-            <select name="currency" id="currency">
-                <option value="BTC">De BTC a LTC</option>
-                <option value="LTC">De LTC a BTC</option>/option>
-            </select>
-            <button >Convertir</button>
+    return (
+
+        <form onSubmit={props.getData} className="form">
+            <input type="number" required className="form-input" placeholder="Introduce un número" min="1" pattern="^[0-9]+"></input>
+            <select name="currency" id="currency" className="form-select">
+                <option value="BTC" className="container_form-select-option">De BTC a LTC</option>
+                <option value="LTC" className="form-select-option">De LTC a BTC</option>/option>
+                </select>
+            <button className="form-btn">Convertir</button>
         </form>
-    </div>)
+
+    )
 }
 
 export default Form;

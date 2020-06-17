@@ -1,11 +1,34 @@
-.container{
+.ciaContainer{
     display:flex;
     flex-direction: row;
+    justify-content: center;
+    margin: 1rem;
+
     &_keys{
-        color:blue;
-        padding: 0 50px 0 0;
+        padding:1rem;
+        font-size: 1rem;
+        line-height: 2rem;
     }
     &_values{
-        color:pink;
+        padding:1rem;
+        font-size: 1rem;
+        line-height: 2rem;
     }
 }
+
+.loader {
+    border: 16px solid grey; 
+    border-top: 16px solid rgb(88, 197, 88); 
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 2s linear infinite;
+    margin:20px;
+    display:block;
+    margin:auto;
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }

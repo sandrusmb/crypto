@@ -2,36 +2,60 @@ import React from 'react';
 import ".././stylesheets/companies.scss";
 
 const Companies = (props) => {
+
     let info = props.companies;
+    let spinner = props.loading;
     let number = props.amount;
     let name = props.currency;
-    console.log(number);
     let companiesKeys = Object.keys(info);
     let companiesValues = Object.values(info);
 
-    return (
-        <div className="container">
-            <div className="container_keys">
-                {companiesKeys.map(companyKey => {
-                    return (
-                        <p>{companyKey}</p>
-                    )
-                })}
+    console.log(companiesValues);
+
+    if (spinner === 2) {
+        return (<div className="loader"></div>)
+    }
+    else {
+        return (
+
+            <div className="ciaContainer">
+                <div className="ciaContainer_keys">
+                    {companiesKeys.map(companyKey => {
+                        return (
+                            <div>
+                                <p>{companyKey}</p>
+                                <hr />
+                            </div>
+                        )
+                    })}
+                </div>
+                <div className="ciaContainer_values">
+                    {companiesValues.map(companyValue => {
+
+                        if (name === "BTC") {
+                            return (
+                                <div>
+                                    <p>{companyValue * number}</p>
+                                    <hr />
+                                </div>
+                            )
+                        } else {
+                            return (
+                                <div>
+                                    <p>{(number * number) / companyValue}</p>
+                                    <hr />
+                                </div>
+                            )
+                        }
+
+
+                    })}
+                </div>
             </div>
-            <div className="container_values">
-                {companiesValues.map(companyValue => {
-
-                    if (name === "BTC") {
-                        return <p>{companyValue * number}</p>
-                    } else {
-                        return <p>{number / companyValue}</p>
-                    }
+        );
+    }
 
 
-                })}
-            </div>
-        </div>
-    );
 }
 
 export default Companies;
