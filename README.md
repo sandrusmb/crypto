@@ -1,7 +1,3 @@
-[https://sandrusmb.github.io/crypto/](https://sandrusmb.github.io/crypto/)
-
-![Demo](https://github.com/sandrusmb/crypto/blob/master/src/images/demo%20crypto%2011-50-58-978.gif?raw=true)
-
 ## Install dependencies
 
 This project is developed with React using npm to manage dependencies. To install them, execute
@@ -102,3 +98,9 @@ I have really enjoyed and learned doing this exercise. I know there are things t
 I am a diamond in the rough and, although I have a lot to polish, I have talent, I am constant and hard-worker. I hope you consider it for the position.
 
 Thank you!
+
+## Demo
+
+[https://sandrusmb.github.io/crypto/](https://sandrusmb.github.io/crypto/)
+
+![Demo](https://github.com/sandrusmb/crypto/blob/master/src/images/demo%20crypto%2011-50-58-978.gif?raw=true)
