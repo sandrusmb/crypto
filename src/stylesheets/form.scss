@@ -6,16 +6,18 @@
 
     @media all and (min-width: 768px) {
         flex-direction: row;
-        
-      }
+    }
 
        &-input{
            border: 1px solid grey;
            border-radius: 0.5rem;
            font-size: 1rem;
-           padding:0.5rem 0;
+           padding:0.5rem 1rem;
            margin: 0.5rem;
-           text-align: center;
+
+           @media all and (min-width: 768px) {
+            text-align: center;
+        }
        }
 
        &-select{
@@ -23,7 +25,6 @@
            border-radius: 0.5rem;
            font-size: 1rem;
            margin: 0.5rem;
-           padding: 0.5rem 2rem;
            text-align: center;
        }
 
