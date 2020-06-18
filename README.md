@@ -1,3 +1,7 @@
+[https://sandrusmb.github.io/crypto/](https://sandrusmb.github.io/crypto/)
+
+![Demo](https://github.com/sandrusmb/crypto/blob/master/src/images/demo%20crypto%2011-50-58-978.gif?raw=true)
+
 ## Install dependencies
 
 This project is developed with React using npm to manage dependencies. To install them, execute
