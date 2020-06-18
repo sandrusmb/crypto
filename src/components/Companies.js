@@ -17,6 +17,7 @@ const Companies = (props) => {
         return (
 
             <div className="ciaContainer">
+
                 <div className="ciaContainer_keys">
                     {companiesKeys.map(companyKey => {
                         return (
@@ -36,7 +37,7 @@ const Companies = (props) => {
                                 return (
 
                                     <div className="paint">
-                                        <p>{companyValue * number}<span>   ¡Ganador! </span></p>
+                                        <p>{companyValue * number}</p>
                                         <hr />
                                     </div>
                                 )
@@ -54,7 +55,7 @@ const Companies = (props) => {
                             if (companyValue == Math.min(...companiesValues)) {
                                 return (
                                     <div>
-                                        <p className="paint">{(number * number) / companyValue}<span> ¡Ganador!</span></p>
+                                        <p className="paint">{(number * number) / companyValue}</p>
                                         <hr />
                                     </div>
                                 )
