@@ -6,7 +6,7 @@ const Form = (props) => {
     return (
 
         <form onSubmit={props.getData} className="form">
-            <input type="number" required className="form-input" placeholder="Cantidad" min="1" pattern="^[0-9]+"></input>
+            <input type="number" className="form-input" placeholder="Cantidad" min="1" pattern="^[0-9]+"></input>
             <select name="currency" id="currency" className="form-select">
                 <option value="BTC" className="container_form-select-option">De BTC a LTC</option>
                 <option value="LTC" className="form-select-option">De LTC a BTC</option>/option>
