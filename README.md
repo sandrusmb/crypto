@@ -57,6 +57,7 @@ crypto
 │ │ │ └── companies.scss
 
 | └── index.js
+
 | └── index.css
 
 ## Decisions
